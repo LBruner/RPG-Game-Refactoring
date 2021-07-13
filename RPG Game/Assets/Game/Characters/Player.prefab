@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed25cc968ad4fe14aaa558a965c090e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 6069610633709239277}
+  navMeshAgent: {fileID: 6069610633709239277}
 --- !u!114 &7483665719528243227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28b0b2db4537f548b55a09977e441ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponRange: 2
 --- !u!1001 &667822933773701471
 PrefabInstance:
   m_ObjectHideFlags: 0

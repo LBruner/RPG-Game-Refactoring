@@ -20,7 +20,7 @@ namespace RPG.Control
         {
             if (InteractWithCombat()) { return; };
             if (InteractWithMovement()) { return; };
-            Debug.Log("Nothing");
+            // Debug.Log("Nothing");
         }
 
         private bool InteractWithCombat()
@@ -37,10 +37,8 @@ namespace RPG.Control
                 {
                     GetComponent<Fighter>().Attack(target);
                 }
-
                 return true;
             }
-
             return false;
         }
 
