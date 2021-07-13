@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using RPG.Combat;
 
 namespace RPG.Movement
 {
@@ -18,8 +16,14 @@ namespace RPG.Movement
             UpdateAnimator();
         }
 
-        public void MoveTo(Vector3 destination)
+        public void StartMoveAction(Vector3 destination)
         {
+            GetComponent<Fighter>().Cancel();
+            MoveTo(destination);
+        }
+
+        public void MoveTo(Vector3 destination)
+        {   
             navMeshAgent.SetDestination(destination);
             navMeshAgent.isStopped = false;
         }
@@ -34,7 +38,7 @@ namespace RPG.Movement
             Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
             float speed = localVelocity.z;
-            
+
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
         }
     }
