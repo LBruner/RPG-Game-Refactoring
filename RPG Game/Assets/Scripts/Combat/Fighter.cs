@@ -4,6 +4,8 @@ using RPG.Core;
 
 namespace RPG.Combat
 {
+    [SelectionBase]
+
     public class Fighter : MonoBehaviour, IAction
     {
         [SerializeField] float weaponRange = 2f;
@@ -33,6 +35,8 @@ namespace RPG.Combat
 
         private void AttackBehavior()
         {
+            transform.LookAt(target);
+
             if (timeSinceLastAttack >= timeBetweenAttacks)
             {
                 GetComponent<Animator>().SetTrigger("attack");

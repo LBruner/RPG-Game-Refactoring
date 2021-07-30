@@ -7,6 +7,8 @@ using UnityEngine;
 
 namespace RPG.Control
 {
+    [SelectionBase]
+
     public class PlayerController : MonoBehaviour
     {
         Mover mover = null;
@@ -31,7 +33,7 @@ namespace RPG.Control
             {
                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
 
-                if(target == null) continue;
+                if (target == null) continue;
 
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -48,7 +50,7 @@ namespace RPG.Control
 
             bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
 
-            if(hasHit)
+            if (hasHit)
             {
                 if (Input.GetMouseButton(0))
                     mover.StartMoveAction(hit.point);

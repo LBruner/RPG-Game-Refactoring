@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +23,8 @@ namespace RPG.Combat
 
         private void Die()
         {
-            if (isDead) { return; }
+            if (isDead) { return; }  
+                     
             GetComponent<Animator>().SetTrigger("die");
             isDead = true;
         }
