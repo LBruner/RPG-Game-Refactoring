@@ -23,10 +23,15 @@ namespace RPG.Combat
 
         private void Die()
         {
-            if (isDead) { return; }  
-                     
+            if (isDead) { return; }
+
             GetComponent<Animator>().SetTrigger("die");
             isDead = true;
+        }
+
+        public bool GetIsDead()
+        {
+            return isDead;
         }
     }
 }

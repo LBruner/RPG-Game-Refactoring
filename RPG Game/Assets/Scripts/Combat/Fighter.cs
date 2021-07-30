@@ -1,6 +1,7 @@
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
+using System;
 
 namespace RPG.Combat
 {
@@ -31,6 +32,18 @@ namespace RPG.Combat
                 AttackBehavior();
                 GetComponent<Mover>().Cancel();
             }
+        }
+
+        public bool CanAttack(CombatTarget combatTarget)
+        {
+            if (combatTarget == null)
+            {
+                return false;
+            }
+
+            Health targetToTest = combatTarget.GetComponent<Health>();
+
+            return targetToTest != null && !targetToTest.GetIsDead();
         }
 
         private void AttackBehavior()
@@ -70,8 +83,5 @@ namespace RPG.Combat
         {
             target = null;
         }
-
-
-
     }
 }
