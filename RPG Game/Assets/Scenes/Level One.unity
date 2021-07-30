@@ -1561,6 +1561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1107064776747722934, guid: dfb1efc8c540e6c4ba6c0b0cce92e6f3,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5978003046474213542, guid: dfb1efc8c540e6c4ba6c0b0cce92e6f3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
