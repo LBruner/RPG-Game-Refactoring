@@ -13,7 +13,6 @@ namespace RPG.Combat
         public void TakeDamage(float damage)
         {
             health = Mathf.Max(health - damage, 0);
-            Debug.Log(health);
 
             if (health == 0)
             {

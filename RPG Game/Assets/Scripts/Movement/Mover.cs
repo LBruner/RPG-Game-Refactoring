@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using RPG.Core;
+using RPG.Combat;
 
 namespace RPG.Movement
 {
@@ -14,11 +15,16 @@ namespace RPG.Movement
         void Update()
         {
             UpdateAnimator();
+
+            if (gameObject.GetComponent<CombatTarget>())
+            {
+                //Debug.Log(navMeshAgent.destination);
+            }
         }
 
         public void StartMoveAction(Vector3 destination)
         {
-            FindObjectOfType<ActionScheduler>().StartAction(this);
+            GetComponent<ActionScheduler>().StartAction(this);
             MoveTo(destination);
         }
 

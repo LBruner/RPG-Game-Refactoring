@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1673107854153798443}
   - component: {fileID: 6069610633709239277}
+  - component: {fileID: 3537621485018790654}
   - component: {fileID: 8682801427471397854}
   - component: {fileID: -692230172101442251}
   - component: {fileID: 1685417318652636792}
   - component: {fileID: 7483665719528243227}
   - component: {fileID: -705432864529887302}
-  - component: {fileID: 3537621485018790654}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -59,6 +59,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &3537621485018790654
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8022497655021774659}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.31
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!95 &8682801427471397854
 Animator:
   serializedVersion: 3
@@ -131,17 +145,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
---- !u!136 &3537621485018790654
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8022497655021774659}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.31
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}

@@ -21,7 +21,8 @@ namespace RPG.Combat
         {
             timeSinceLastAttack += Time.deltaTime;
 
-            if (target == null || target.GetIsDead()) { return; }
+            if (target == null) { return; }
+            if (target.GetIsDead()) { return; }
 
             if (!GetIsInRange())
             {
@@ -29,28 +30,18 @@ namespace RPG.Combat
             }
             else
             {
-                AttackBehavior();
                 GetComponent<Mover>().Cancel();
-            }
-        }
-
-        public bool CanAttack(CombatTarget combatTarget)
-        {
-            if (combatTarget == null)
-            {
-                return false;
+                AttackBehavior();
             }
 
-            Health targetToTest = combatTarget.GetComponent<Health>();
-
-            return targetToTest != null && !targetToTest.GetIsDead();
+            Debug.Log(target.transform.position);
         }
 
         private void AttackBehavior()
         {
             transform.LookAt(target.transform);
 
-            if (timeSinceLastAttack >= timeBetweenAttacks)
+            if (timeSinceLastAttack > timeBetweenAttacks)
             {
                 TriggerAttack();
                 timeSinceLastAttack = 0;
@@ -75,12 +66,25 @@ namespace RPG.Combat
 
         private bool GetIsInRange()
         {
-            return (target.transform.position - transform.position).sqrMagnitude < weaponRange * weaponRange;
+            return Vector3.Distance(transform.position, target.transform.position) < weaponRange;
         }
 
-        public void Attack(CombatTarget combatTarget)
+
+        public bool CanAttack(GameObject combatTarget)
         {
-            FindObjectOfType<ActionScheduler>().StartAction(this);
+            if (combatTarget == null)
+            {
+                return false;
+            }
+
+            Health targetToTest = combatTarget.GetComponent<Health>();
+
+            return targetToTest != null && !targetToTest.GetIsDead();
+        }
+
+        public void Attack(GameObject combatTarget)
+        {
+            GetComponent<ActionScheduler>().StartAction(this);
             target = combatTarget.GetComponent<Health>();
         }
 
