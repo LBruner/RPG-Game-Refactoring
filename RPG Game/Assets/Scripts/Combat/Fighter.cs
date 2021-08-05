@@ -33,8 +33,6 @@ namespace RPG.Combat
                 GetComponent<Mover>().Cancel();
                 AttackBehavior();
             }
-
-            Debug.Log(target.transform.position);
         }
 
         private void AttackBehavior()

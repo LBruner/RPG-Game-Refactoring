@@ -569,6 +569,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: bfbe2e8b331e2cc42be1591f949c0e41, type: 2}
+    - target: {fileID: 6552952686647132840, guid: 7f7cd86fcb2dd2c4788ed56381f486c6,
+        type: 3}
+      propertyPath: chaseDistance
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7229105243641974175, guid: 7f7cd86fcb2dd2c4788ed56381f486c6,
         type: 3}
       propertyPath: health
@@ -1599,6 +1604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  isDead: 0
 --- !u!1 &1258119315
 GameObject:
   m_ObjectHideFlags: 0
