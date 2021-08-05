@@ -15,7 +15,7 @@ namespace RPG.Combat
 
         private Health target = null;
 
-        private float timeSinceLastAttack;
+        private float timeSinceLastAttack = Mathf.Infinity;
 
         private void Update()
         {
