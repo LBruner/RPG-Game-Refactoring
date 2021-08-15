@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 240971811}
   - component: {fileID: 240971812}
   - component: {fileID: 240971813}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StartCutscene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
