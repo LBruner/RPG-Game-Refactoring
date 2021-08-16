@@ -41,7 +41,12 @@ namespace RPG.SceneManagement
             Fader fader = FindObjectOfType<Fader>();
 
             yield return StartCoroutine(fader.FadeOut(fadeOutTime));
+
+            FindObjectOfType<SavingWrapper>().Save();
+
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
+
+            FindObjectOfType<SavingWrapper>().Load();
 
             Portal otherPortal = GetOtherPortal();
             UpdatePlayer(otherPortal);
