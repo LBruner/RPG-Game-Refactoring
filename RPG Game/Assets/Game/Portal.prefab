@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1661797625854524228}
   m_Layer: 2
-  m_Name: GameObject
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -107,4 +107,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: 1
   spawnPosition: {fileID: 1661797625854524228}
-  portalID: -1
+  destination: 0
