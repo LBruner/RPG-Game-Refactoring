@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using RPG.Combat;
 using RPG.Core;
 using RPG.Movement;
@@ -27,7 +24,6 @@ namespace RPG.Control
 
             if (InteractWithCombat()) { return; };
             if (InteractWithMovement()) { return; };
-            // Debug.Log("Nothing");
         }
 
         private bool InteractWithCombat()
