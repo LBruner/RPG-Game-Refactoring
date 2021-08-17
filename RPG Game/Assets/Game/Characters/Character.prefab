@@ -133,6 +133,9 @@ MonoBehaviour:
   weaponRange: 2
   timeBetweenAttacks: 1
   weaponDamage: 5
+  weaponPrefab: {fileID: 0}
+  handTransform: {fileID: 0}
+  weaponOverride: {fileID: 22100000, guid: 27945ba0fd10e0348ab2605e4f6c0ceb, type: 2}
 --- !u!114 &-705432864529887302
 MonoBehaviour:
   m_ObjectHideFlags: 0

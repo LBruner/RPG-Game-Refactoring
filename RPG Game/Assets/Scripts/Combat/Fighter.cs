@@ -14,13 +14,14 @@ namespace RPG.Combat
         [SerializeField] float weaponDamage = 5f;
         [SerializeField] GameObject weaponPrefab = null;
         [SerializeField] Transform handTransform = null;
+        [SerializeField] AnimatorOverrideController weaponOverride = null;
         private Health target = null;
 
         private float timeSinceLastAttack = Mathf.Infinity;
 
         void Start()
         {
-            Instantiate(weaponPrefab, handTransform);
+            SpawnWeapon();
         }
 
         private void Update()
@@ -39,6 +40,13 @@ namespace RPG.Combat
                 GetComponent<Mover>().Cancel();
                 AttackBehavior();
             }
+        }
+
+        private void SpawnWeapon()
+        {
+            Instantiate(weaponPrefab, handTransform);
+            Animator animator = GetComponent<Animator>();
+            animator.runtimeAnimatorController = weaponOverride;
         }
 
         private void AttackBehavior()
