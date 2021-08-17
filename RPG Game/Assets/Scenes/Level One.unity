@@ -1619,7 +1619,7 @@ PrefabInstance:
         type: 3}
       propertyPath: weapon
       value: 
-      objectReference: {fileID: 11400000, guid: 31c1ff1ddf342ec458ef2a7a43e9aa60,
+      objectReference: {fileID: 11400000, guid: 3c38e5da645728f44b068037c965aafe,
         type: 2}
     - target: {fileID: 9021448351136408934, guid: 7f7cd86fcb2dd2c4788ed56381f486c6,
         type: 3}
