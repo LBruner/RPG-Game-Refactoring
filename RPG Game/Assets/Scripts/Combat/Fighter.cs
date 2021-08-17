@@ -12,10 +12,16 @@ namespace RPG.Combat
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamage = 5f;
-
+        [SerializeField] GameObject weaponPrefab = null;
+        [SerializeField] Transform handTransform = null;
         private Health target = null;
 
         private float timeSinceLastAttack = Mathf.Infinity;
+
+        void Start()
+        {
+            Instantiate(weaponPrefab, handTransform);
+        }
 
         private void Update()
         {
