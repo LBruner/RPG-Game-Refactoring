@@ -1615,6 +1615,12 @@ PrefabInstance:
       propertyPath: uniqueIdentifier
       value: d49f921c-0378-452c-a05d-845694a1d4da
       objectReference: {fileID: 0}
+    - target: {fileID: 8483776970591633982, guid: 7f7cd86fcb2dd2c4788ed56381f486c6,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 31c1ff1ddf342ec458ef2a7a43e9aa60,
+        type: 2}
     - target: {fileID: 9021448351136408934, guid: 7f7cd86fcb2dd2c4788ed56381f486c6,
         type: 3}
       propertyPath: m_Name
@@ -2094,6 +2100,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1296081969514206615, guid: dc40b96f9bd4f9d4dbbdc134cf8377b4,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 31c1ff1ddf342ec458ef2a7a43e9aa60,
+        type: 2}
     - target: {fileID: 1296081969514206615, guid: dc40b96f9bd4f9d4dbbdc134cf8377b4,
         type: 3}
       propertyPath: weaponPrefab
