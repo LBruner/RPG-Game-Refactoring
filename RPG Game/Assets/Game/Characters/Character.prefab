@@ -130,12 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28b0b2db4537f548b55a09977e441ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponRange: 2
   timeBetweenAttacks: 1
-  weaponDamage: 5
-  weaponPrefab: {fileID: 0}
   handTransform: {fileID: 0}
-  weaponOverride: {fileID: 22100000, guid: 27945ba0fd10e0348ab2605e4f6c0ceb, type: 2}
+  defaultWeapon: {fileID: 11400000, guid: 3c38e5da645728f44b068037c965aafe, type: 2}
+  currentWeapon: {fileID: 0}
 --- !u!114 &-705432864529887302
 MonoBehaviour:
   m_ObjectHideFlags: 0
