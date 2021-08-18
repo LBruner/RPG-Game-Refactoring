@@ -26,6 +26,7 @@ namespace RPG.Combat
 
         public void EquipWeapon(Weapon weapon)
         {
+            if (weapon == null) { Debug.LogError("Weapon is null"); ; }
             currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
