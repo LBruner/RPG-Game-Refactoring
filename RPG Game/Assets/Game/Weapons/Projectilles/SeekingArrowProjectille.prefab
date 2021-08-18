@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  isSeeker: 0
+  isSeeker: 1
   hitEffect: {fileID: 1477884343044216706, guid: 9690e4c898d3b0242b5eab8562915533,
     type: 3}
 --- !u!54 &5825856116413912482
