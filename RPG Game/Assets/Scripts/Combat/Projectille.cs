@@ -9,14 +9,23 @@ namespace RPG.Combat
     public class Projectille : MonoBehaviour
     {
         [SerializeField] float speed = 5f;
+        [SerializeField] bool isSeeker = false;
 
         float damage = 0;
         Health target = null;
 
+        private void Start()
+        {
+            transform.LookAt(GetAimLocation());
+        }
+
         private void Update()
         {
-            if (target == null) { return; }
-            transform.LookAt(GetAimLocation());
+            if (target != null && isSeeker)
+            {
+                if (!target.GetIsDead())
+                    transform.LookAt(GetAimLocation());
+            }
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
@@ -34,12 +43,13 @@ namespace RPG.Combat
             {
                 return target.transform.position;
             }
+
             return target.transform.position + Vector3.up * targetCapsule.height / 2;
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<Health>() != target) { return; }
+            if (other.GetComponent<Health>() != target || other.GetComponent<Health>().GetIsDead()) { return; }
 
             target.TakeDamage(damage);
 
