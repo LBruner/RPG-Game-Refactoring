@@ -70,10 +70,18 @@ namespace RPG.Combat
 
         private void Hit()
         {
-            if (target != null)
-            {
+            if (target == null) { return; }
+
+
+            if (currentWeapon.HasProjectille())
+                currentWeapon.LaunchProjectille(rightHandTransform, leftHandTransform, target);
+            else
                 target.TakeDamage(currentWeapon.GetWeaponDamage());
-            }
+        }
+
+        private void Shoot()
+        {
+            Hit();
         }
 
         private bool GetIsInRange()
