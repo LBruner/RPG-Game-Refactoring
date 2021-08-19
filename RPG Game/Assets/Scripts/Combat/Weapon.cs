@@ -8,7 +8,7 @@ namespace RPG.Combat
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Make new weapon", order = 0)]
     public class Weapon : ScriptableObject
     {
-        [SerializeField] AnimatorOverrideController weaponOverride = null;
+        [SerializeField] AnimatorOverrideController animatorOverride = null;
         [SerializeField] GameObject equippedPrefab = null;
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float weaponDamage = 5f;
@@ -27,9 +27,17 @@ namespace RPG.Combat
                 GameObject weapon = Instantiate(equippedPrefab, handTransform);
                 weapon.name = weaponName;
             }
-            if (animator == null || weaponOverride == null) { return; }
 
-            animator.runtimeAnimatorController = weaponOverride;
+            var overrideController = animator.runtimeAnimatorController as AnimatorOverrideController;
+
+            if (animatorOverride != null)
+            {
+                animator.runtimeAnimatorController = animatorOverride;
+            }
+            else if (overrideController != null)
+            {
+                animator.runtimeAnimatorController = overrideController.runtimeAnimatorController;
+            }
         }
 
         private void DestroyOldWeapon(Transform rightHand, Transform leftHand)

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88fde8db70f8289459fc6195267345f9, type: 3}
-  m_Name: Seeking Bow
+  m_Name: Bow
   m_EditorClassIdentifier: 
   weaponOverride: {fileID: 22100000, guid: 7d9791147abfaa849bce61607e6fa929, type: 2}
   equippedPrefab: {fileID: 5604664557829803863, guid: 27cb883042d6f0f44a1c5167a58bb887,
@@ -18,5 +18,5 @@ MonoBehaviour:
   weaponRange: 20
   weaponDamage: 10
   isRightHanded: 0
-  projectille: {fileID: 5110050914261267794, guid: 519eb844d6190364a850fb6856c027d0,
+  projectille: {fileID: 5110050914261267794, guid: b308835b7ebb8274fa97a3b3d3b0af36,
     type: 3}
