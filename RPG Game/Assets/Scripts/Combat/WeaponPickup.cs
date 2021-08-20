@@ -10,12 +10,6 @@ namespace RPG.Combat
         [SerializeField] Weapon weapon = null;
         [SerializeField] float respawnTime = 5f;
 
-        private void Start()
-        {
-            foreach (Transform child in transform)
-                print("Foreach loop: " + child);
-        }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
