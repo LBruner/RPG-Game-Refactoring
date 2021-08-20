@@ -9,23 +9,28 @@ namespace RPG.Resources
 {
     public class Health : MonoBehaviour, ISaveable
     {
-        [SerializeField] float health = 100f;
+        [SerializeField] float healthPoints = 100f;
 
         bool isDead;
 
         private void Start()
         {
-            health = GetComponent<BaseStats>().GetHealth();
+            healthPoints = GetComponent<BaseStats>().GetHealth();
         }
 
         public void TakeDamage(float damage)
         {
-            health = Mathf.Max(health - damage, 0);
+            healthPoints = Mathf.Max(healthPoints - damage, 0);
 
-            if (health == 0)
+            if (healthPoints == 0)
             {
                 Die();
             }
+        }
+
+        public float GetPercentage()
+        {
+            return 100 * (healthPoints / GetComponent<BaseStats>().GetHealth());
         }
 
         private void Die()
@@ -44,15 +49,15 @@ namespace RPG.Resources
 
         public object CaptureState()
         {
-            return health;
+            return healthPoints;
         }
 
         public void RestoreState(object state)
         {
             float savedHealth = (float)state;
-            health = savedHealth;
+            healthPoints = savedHealth;
 
-            if (health == 0)
+            if (healthPoints == 0)
             {
                 Die();
             }
