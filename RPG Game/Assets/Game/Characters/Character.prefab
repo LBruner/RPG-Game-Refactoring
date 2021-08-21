@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -705432864529887302}
   - component: {fileID: 9198828552417271373}
   - component: {fileID: 2503826994769142917}
+  - component: {fileID: 1463230183975788591}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca30a16674d366a4d85726354888b0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  healthPoints: 100
 --- !u!114 &9198828552417271373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,3 +177,16 @@ MonoBehaviour:
   startingLevel: 1
   characterClass: 0
   progression: {fileID: 11400000, guid: 2b52cb2614fbe384a99a723c22c88f07, type: 2}
+--- !u!114 &1463230183975788591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8022497655021774659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41cb355d596682442b0c501ca2b82a0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expiriencePoints: 0

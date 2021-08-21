@@ -84,9 +84,9 @@ namespace RPG.Combat
 
 
             if (currentWeapon.HasProjectille())
-                currentWeapon.LaunchProjectille(rightHandTransform, leftHandTransform, target);
+                currentWeapon.LaunchProjectille(rightHandTransform, leftHandTransform, target, gameObject);
             else
-                target.TakeDamage(currentWeapon.GetWeaponDamage());
+                target.TakeDamage(gameObject, currentWeapon.GetWeaponDamage());
         }
 
         private void Shoot()

@@ -36,6 +36,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1463230183975788591, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: expiriencePoints
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1673107854153798443, guid: 3b06425c8cfc7e94098bffc445b056af,
         type: 3}
       propertyPath: m_RootOrder

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using RPG.Core;
@@ -18,15 +19,29 @@ namespace RPG.Resources
             healthPoints = GetComponent<BaseStats>().GetHealth();
         }
 
-        public void TakeDamage(float damage)
+        public void TakeDamage(GameObject instigator, float damage)
         {
             healthPoints = Mathf.Max(healthPoints - damage, 0);
 
             if (healthPoints == 0)
             {
-                Die();
+                if (instigator == GameObject.FindWithTag("Player"))
+                {
+                    AwardExperience(instigator);
+                    Die();
+                }
             }
         }
+
+        private void AwardExperience(GameObject instigator)
+        {
+            Experience experience = instigator.GetComponent<Experience>();
+
+            if (experience == null) { return; }
+
+            experience.GainExperience(GetComponent<BaseStats>().GetExperienceReward());
+        }
+
 
         public float GetPercentage()
         {
