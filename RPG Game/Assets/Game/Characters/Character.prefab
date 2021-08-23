@@ -147,7 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca30a16674d366a4d85726354888b0a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 100
 --- !u!114 &9198828552417271373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,3 +175,5 @@ MonoBehaviour:
   startingLevel: 1
   characterClass: 0
   progression: {fileID: 11400000, guid: 2b52cb2614fbe384a99a723c22c88f07, type: 2}
+  levelUpVFX: {fileID: 1705630452528996250, guid: 8ecb7e628536601448a48e1924261250,
+    type: 3}
