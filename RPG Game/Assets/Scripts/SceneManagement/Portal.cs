@@ -26,6 +26,7 @@ namespace RPG.SceneManagement
             if (other.CompareTag("Player"))
             {
                 StartCoroutine(Transition());
+                Debug.Log("A");
             }
         }
 
