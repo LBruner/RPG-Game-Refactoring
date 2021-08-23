@@ -24,8 +24,6 @@ namespace RPG.Stats
 
         public int GetLevel()
         {
-
-
             Experience experience = GetComponent<Experience>();
 
             if (experience == null)
