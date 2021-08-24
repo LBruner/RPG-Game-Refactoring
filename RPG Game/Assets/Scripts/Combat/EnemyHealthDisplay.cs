@@ -23,7 +23,10 @@ namespace RPG.Resources
             if (!player.GetTarget())
                 displayText.text = string.Format("{0}", "NA");
             else
-                displayText.text = string.Format("{0}%", player.GetTarget().GetComponent<Health>().GetPercentage());
+            {
+                Health enemy = player.GetTarget().GetComponent<Health>();
+                displayText.text = string.Format("{0:0}/{1:0}", enemy.GetHealthPoints(), enemy.GetMaxHealthPoints());
+            }
         }
     }
 }
