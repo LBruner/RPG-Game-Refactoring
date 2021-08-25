@@ -25,13 +25,15 @@ namespace RPG.Control
 
         int currentWaypointIndex = 0;
 
-        private void Start()
+        private void Awake()
         {
             fighter = GetComponent<Fighter>();
             player = GameObject.FindWithTag("Player");
             health = GetComponent<Health>();
             mover = GetComponent<Mover>();
-
+        }
+        private void Start()
+        {
             guardPosition = transform.position;
         }
 

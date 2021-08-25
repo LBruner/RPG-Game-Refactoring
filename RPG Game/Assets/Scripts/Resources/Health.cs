@@ -19,8 +19,16 @@ namespace RPG.Resources
         {
             if (healthPoints < 0)
                 healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
+        }
 
+        private void OnEnable()
+        {
             GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+        }
+
+        private void OnDisable()
+        {
+            GetComponent<BaseStats>().onLevelUp -= RegenerateHealth;
         }
 
         public void TakeDamage(GameObject instigator, float damage)

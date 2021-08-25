@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using RPG.Control;
+﻿using RPG.Control;
 using RPG.Core;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -8,14 +6,23 @@ using UnityEngine.Playables;
 public class CinematicControlRemover : MonoBehaviour
 {
     GameObject player;
-    private void Start()
+    PlayableDirector director;
+    private void Awake()
     {
         player = GameObject.FindWithTag("Player");
+        director = GetComponent<PlayableDirector>();
+    }
 
-        PlayableDirector director = GetComponent<PlayableDirector>();
-
+    private void OnEnable()
+    {
         director.played += EnableControl;
         director.stopped += DisableControl;
+    }
+
+    private void OnDisable()
+    {
+        director.played -= EnableControl;
+        director.stopped -= DisableControl;
     }
 
     void EnableControl(PlayableDirector director)

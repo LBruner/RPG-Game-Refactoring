@@ -14,7 +14,7 @@ namespace RPG.Movement
 
         Ray lastRay;
 
-        private void Start()
+        private void Awake()
         {
             health = GetComponent<Health>();
         }

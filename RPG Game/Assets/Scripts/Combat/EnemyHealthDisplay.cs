@@ -12,7 +12,7 @@ namespace RPG.Resources
 
         Text displayText = null;
 
-        private void Start()
+        private void Awake()
         {
             player = GameObject.FindWithTag("Player").GetComponent<Fighter>();
             displayText = GetComponent<Text>();
