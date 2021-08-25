@@ -1,17 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &2062830119811658847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564045902065487854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6a902d70b936d4b8ba965192930d44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &576283390637650536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25,6 +13,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experiencePoints: 0
+--- !u!114 &2062830119811658847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564045902065487854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6a902d70b936d4b8ba965192930d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5978003046479515448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -156,6 +156,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2503826994769142917, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: shouldUseModifiers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483665719528243227, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 31c1ff1ddf342ec458ef2a7a43e9aa60,
+        type: 2}
     - target: {fileID: 7483665719528243227, guid: 3b06425c8cfc7e94098bffc445b056af,
         type: 3}
       propertyPath: leftHandTransform
