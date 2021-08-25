@@ -1,3 +1,4 @@
+using System;
 using RPG.Combat;
 using RPG.Movement;
 using RPG.Resources;
@@ -12,6 +13,22 @@ namespace RPG.Control
         Mover mover = null;
         Health health = null;
 
+        enum CursorType
+        {
+            None,
+            Movement,
+            Combat
+        }
+
+        [System.Serializable]
+        struct CursorMapping
+        {
+            public CursorType type;
+            public Texture2D texture;
+        }
+
+        [SerializeField] CursorMapping[] cursorMappings = null;
+
         void Awake()
         {
             health = GetComponent<Health>();
@@ -24,6 +41,8 @@ namespace RPG.Control
 
             if (InteractWithCombat()) { return; };
             if (InteractWithMovement()) { return; };
+
+            SetCursor(CursorType.None);
         }
 
         private bool InteractWithCombat()
@@ -42,6 +61,8 @@ namespace RPG.Control
                 {
                     GetComponent<Fighter>().Attack(target.gameObject);
                 }
+
+                SetCursor(CursorType.Combat);
                 return true;
             }
             return false;
@@ -57,9 +78,30 @@ namespace RPG.Control
             {
                 if (Input.GetMouseButton(0))
                     mover.StartMoveAction(hit.point);
+
+                SetCursor(CursorType.Movement);
                 return true;
             }
             return false;
+        }
+
+
+        private void SetCursor(CursorType type)
+        {
+            CursorMapping mapping = GetCursorMapping(type);
+            Cursor.SetCursor(mapping.texture, new Vector2(0, 0), CursorMode.Auto);
+        }
+
+        private CursorMapping GetCursorMapping(CursorType type)
+        {
+            foreach (CursorMapping mapping in cursorMappings)
+            {
+                if (mapping.type == type)
+                {
+                    return mapping;
+                }
+            }
+            return cursorMappings[0];
         }
 
         private static Ray GetMouseRay()
