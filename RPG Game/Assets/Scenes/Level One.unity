@@ -1730,6 +1730,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mage (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6787275891006457806, guid: d64e8ed6118e6044eb1c30e1dc2f3f5e,
+        type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7761475318094508128, guid: d64e8ed6118e6044eb1c30e1dc2f3f5e,
         type: 3}
       propertyPath: m_RootOrder

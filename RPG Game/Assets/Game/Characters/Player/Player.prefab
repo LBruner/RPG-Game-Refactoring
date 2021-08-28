@@ -38,6 +38,8 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: f6b5dd15dd6519e4aa3ad03b1da0876d, type: 3}
   - type: 5
     texture: {fileID: 2800000, guid: 6d0916f30d4a8e84c839a037bed24d2a, type: 3}
+  maxNavMeshProjectionDistance: 1
+  maxNavPathLengh: 40
 --- !u!1001 &5978003046479515448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,6 +116,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9201890210600304038}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SpawnDamageText
+      objectReference: {fileID: 0}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1673107854153798443, guid: 3b06425c8cfc7e94098bffc445b056af,
         type: 3}
       propertyPath: m_RootOrder
@@ -174,6 +201,11 @@ PrefabInstance:
       propertyPath: shouldUseModifiers
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5325237528582618551, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7483665719528243227, guid: 3b06425c8cfc7e94098bffc445b056af,
         type: 3}
       propertyPath: defaultWeapon
@@ -209,3 +241,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7531786449245104301}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9201890210600304038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1672499822913082635, guid: 3b06425c8cfc7e94098bffc445b056af,
+    type: 3}
+  m_PrefabInstance: {fileID: 7531786449245104301}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840043320d0344b48be9e3eb4a3ea12d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
