@@ -111,7 +111,6 @@ namespace RPG.Stats
                 }
                 return total;
             }
-            Debug.Log(total);
             return total;
         }
 
