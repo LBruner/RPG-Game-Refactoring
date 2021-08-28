@@ -158,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foreground: {fileID: 8480241268565536435}
   health: {fileID: 0}
+  rootCanvas: {fileID: 4741875498986324916}
 --- !u!1 &6763070617091955628
 GameObject:
   m_ObjectHideFlags: 0
