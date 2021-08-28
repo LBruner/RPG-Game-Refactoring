@@ -1,5 +1,6 @@
 ﻿using RPG.Attributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.Combat
 {
@@ -14,6 +15,8 @@ namespace RPG.Combat
         float damage = 0;
         Health target = null;
         GameObject instigator = null;
+
+        [SerializeField] UnityEvent onHit;
 
         private void Start()
         {
@@ -53,7 +56,10 @@ namespace RPG.Combat
 
         private void OnTriggerEnter(Collider other)
         {
+
             if (other.GetComponent<Health>() != target || other.GetComponent<Health>().GetIsDead()) { return; }
+
+            onHit?.Invoke();
 
             target.TakeDamage(instigator, damage);
 
