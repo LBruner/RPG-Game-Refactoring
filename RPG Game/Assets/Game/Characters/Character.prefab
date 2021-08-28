@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7819110546787467311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5325237528582618551}
+  - component: {fileID: 1672499822913082635}
+  m_Layer: 0
+  m_Name: DamageTextSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5325237528582618551
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7819110546787467311}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1673107854153798443}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1672499822913082635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7819110546787467311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840043320d0344b48be9e3eb4a3ea12d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTextPrefab: {fileID: 906645784751015492, guid: 02aab4bf0834a064191b54381d5d9ada,
+    type: 3}
 --- !u!1 &8022497655021774659
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,7 +81,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5218790072323541457}
+  - {fileID: 5325237528582618551}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -152,7 +197,7 @@ MonoBehaviour:
   takeDamage:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 777227161565285563}
+      - m_Target: {fileID: 1672499822913082635}
         m_MethodName: SpawnDamageText
         m_Mode: 4
         m_Arguments:
@@ -194,90 +239,3 @@ MonoBehaviour:
   levelUpVFX: {fileID: 1705630452528996250, guid: 8ecb7e628536601448a48e1924261250,
     type: 3}
   shouldUseModifiers: 0
---- !u!1001 &7148779128891642424
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1673107854153798443}
-    m_Modifications:
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3711291011067249272, guid: ca339308809e9324d8da26e0b22fcf53,
-        type: 3}
-      propertyPath: m_Name
-      value: DamageTextSpawner
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ca339308809e9324d8da26e0b22fcf53, type: 3}
---- !u!4 &5218790072323541457 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3123612849553677289, guid: ca339308809e9324d8da26e0b22fcf53,
-    type: 3}
-  m_PrefabInstance: {fileID: 7148779128891642424}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &777227161565285563 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7637211346952674947, guid: ca339308809e9324d8da26e0b22fcf53,
-    type: 3}
-  m_PrefabInstance: {fileID: 7148779128891642424}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 840043320d0344b48be9e3eb4a3ea12d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

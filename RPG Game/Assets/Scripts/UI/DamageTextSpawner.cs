@@ -11,6 +11,8 @@ namespace RPG.UI
         public void SpawnDamageText(float damage)
         {
             DamageText instance = Instantiate<DamageText>(damageTextPrefab, transform);
+
+            instance.SetText(damage);
         }
     }
 }

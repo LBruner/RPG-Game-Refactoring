@@ -53,12 +53,11 @@ namespace RPG.Resources
                 {
                     AwardExperience(instigator);
                 }
+
+                takeDamage?.Invoke();
                 Die();
             }
-            else
-            {
-                takeDamage?.Invoke();
-            }
+
         }
 
         public float GetHealthPoints()
