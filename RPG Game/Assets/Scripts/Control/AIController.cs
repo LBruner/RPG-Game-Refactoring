@@ -15,6 +15,7 @@ namespace RPG.Control
         [SerializeField] float waypointTolerance = 1f;
         [SerializeField] float waypointDwellTime = 3f;
         [SerializeField] float aggrevatedTime = 3f;
+        [SerializeField] float shoutDistance = 5f;
 
         GameObject player = null;
         Fighter fighter = null;
@@ -85,6 +86,30 @@ namespace RPG.Control
         {
             timeSinceLastSawPlayer = 0;
             fighter.Attack(player);
+
+            AggrevateNearbyEnemies();
+        }
+
+        private void AggrevateNearbyEnemies()
+        {
+            RaycastHit[] hits = Physics.SphereCastAll(transform.position, shoutDistance, Vector3.up, 0f);
+
+            Debug.Log(hits.Length);
+            foreach (RaycastHit hit in hits)
+            {
+                AIController controller = hit.transform.GetComponent<AIController>();
+                if (controller != null)
+                {
+                    controller.Aggravate();
+                }
+            }
+        }
+
+        private bool IsAggrevated()
+        {
+            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+
+            return distanceToPlayer < chaseDistance || timeSinceAggrevated < aggrevatedTime;
         }
 
         private void SuspicionBehavior()
@@ -124,13 +149,6 @@ namespace RPG.Control
         {
             float distanceToWaypoint = Vector3.Distance(transform.position, GetCurrentWaypoint());
             return distanceToWaypoint < waypointTolerance;
-        }
-
-        private bool IsAggrevated()
-        {
-            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-
-            return distanceToPlayer < chaseDistance || timeSinceAggrevated < aggrevatedTime;
         }
 
         private void OnDrawGizmosSelected()
