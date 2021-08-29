@@ -56,7 +56,7 @@ namespace RPG.Attributes
 
         public void TakeDamage(GameObject instigator, float damage)
         {
-            takeDamage?.Invoke(damage);
+            takeDamage?.Invoke(Mathf.Round(damage));
 
             healthPoints.value = Mathf.Max(healthPoints.value - damage, 0);
 

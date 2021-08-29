@@ -36,6 +36,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 6552952686647132840}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Aggravate
+      objectReference: {fileID: 0}
+    - target: {fileID: -705432864529887302, guid: 3b06425c8cfc7e94098bffc445b056af,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1463230183975788591, guid: 3b06425c8cfc7e94098bffc445b056af,
         type: 3}
       propertyPath: expiriencePoints
@@ -104,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 5325237528582618551, guid: 3b06425c8cfc7e94098bffc445b056af,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6069610633709239277, guid: 3b06425c8cfc7e94098bffc445b056af,
         type: 3}

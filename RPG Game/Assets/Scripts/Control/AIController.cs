@@ -14,6 +14,7 @@ namespace RPG.Control
         [SerializeField] PatrolPath patrolPath = null;
         [SerializeField] float waypointTolerance = 1f;
         [SerializeField] float waypointDwellTime = 3f;
+        [SerializeField] float aggrevatedTime = 3f;
 
         GameObject player = null;
         Fighter fighter = null;
@@ -22,6 +23,7 @@ namespace RPG.Control
 
         float timeSinceLastSawPlayer = Mathf.Infinity;
         float timeSinceReachedWaypoint = Mathf.Infinity;
+        float timeSinceAggrevated = Mathf.Infinity;
 
         int currentWaypointIndex = 0;
 
@@ -53,7 +55,7 @@ namespace RPG.Control
 
             UpdateTimers();
 
-            if (InAttackRange() && fighter.CanAttack(player))
+            if (IsAggrevated() && fighter.CanAttack(player))
             {
                 AttackBehavior();
             }
@@ -67,10 +69,16 @@ namespace RPG.Control
             }
         }
 
+        public void Aggravate()
+        {
+            timeSinceAggrevated = 0;
+        }
+
         private void UpdateTimers()
         {
             timeSinceLastSawPlayer += Time.deltaTime;
             timeSinceReachedWaypoint += Time.deltaTime;
+            timeSinceAggrevated += Time.deltaTime;
         }
 
         private void AttackBehavior()
@@ -118,10 +126,11 @@ namespace RPG.Control
             return distanceToWaypoint < waypointTolerance;
         }
 
-        private bool InAttackRange()
+        private bool IsAggrevated()
         {
             float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-            return distanceToPlayer < chaseDistance;
+
+            return distanceToPlayer < chaseDistance || timeSinceAggrevated < aggrevatedTime;
         }
 
         private void OnDrawGizmosSelected()
