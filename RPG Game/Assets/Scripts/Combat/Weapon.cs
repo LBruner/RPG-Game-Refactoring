@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace RPG.Combat
+namespace GameDevTV.Combat
 {
     public class Weapon : MonoBehaviour
     {

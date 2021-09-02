@@ -1,11 +1,11 @@
 ﻿using GameDevTV.Utils;
-using RPG.Combat;
-using RPG.Core;
-using RPG.Movement;
-using RPG.Attributes;
+using GameDevTV.Combat;
+using GameDevTV.Core;
+using GameDevTV.Movement;
+using GameDevTV.Attributes;
 using UnityEngine;
 
-namespace RPG.Control
+namespace GameDevTV.Control
 {
     public class AIController : MonoBehaviour
     {

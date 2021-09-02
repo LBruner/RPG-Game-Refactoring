@@ -1,14 +1,14 @@
 using UnityEngine;
-using RPG.Movement;
-using RPG.Core;
-using RPG.Saving;
-using RPG.Attributes;
-using RPG.Stats;
+using GameDevTV.Movement;
+using GameDevTV.Core;
+using GameDevTV.Saving;
+using GameDevTV.Attributes;
+using GameDevTV.Stats;
 using System.Collections.Generic;
 using GameDevTV.Utils;
 using System;
 
-namespace RPG.Combat
+namespace GameDevTV.Combat
 {
     [SelectionBase]
 

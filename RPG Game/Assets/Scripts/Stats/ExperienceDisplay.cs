@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace RPG.Stats
+namespace GameDevTV.Stats
 {
     public class ExperienceDisplay : MonoBehaviour
     {

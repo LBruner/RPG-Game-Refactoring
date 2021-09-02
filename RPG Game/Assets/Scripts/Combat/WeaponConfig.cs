@@ -1,7 +1,7 @@
-﻿using RPG.Attributes;
+﻿using GameDevTV.Attributes;
 using UnityEngine;
 
-namespace RPG.Combat
+namespace GameDevTV.Combat
 {
 
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Make new weapon", order = 0)]

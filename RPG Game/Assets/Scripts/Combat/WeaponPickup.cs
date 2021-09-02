@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using RPG.Attributes;
-using RPG.Control;
+using GameDevTV.Attributes;
+using GameDevTV.Control;
 using UnityEngine;
 
-namespace RPG.Combat
+namespace GameDevTV.Combat
 {
     public class WeaponPickup : MonoBehaviour, IRaycastable
     {

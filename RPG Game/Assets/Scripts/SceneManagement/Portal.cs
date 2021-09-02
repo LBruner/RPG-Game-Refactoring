@@ -2,10 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
-using RPG.Control;
-using RPG.Core;
+using GameDevTV.Control;
+using GameDevTV.Core;
 
-namespace RPG.SceneManagement
+namespace GameDevTV.SceneManagement
 {
     public class Portal : MonoBehaviour
     {

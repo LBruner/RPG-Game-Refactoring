@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace RPG.Attributes
+namespace GameDevTV.Attributes
 {
     public class HealthBar : MonoBehaviour
     {

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using GameDevTV.Utils;
 using UnityEngine;
 
-namespace RPG.Stats
+namespace GameDevTV.Stats
 {
     public class BaseStats : MonoBehaviour
     {

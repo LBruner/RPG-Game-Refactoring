@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using RPG.Saving;
+using GameDevTV.Saving;
 using UnityEngine;
 
-namespace RPG.SceneManagement
+namespace GameDevTV.SceneManagement
 {
     public class SavingWrapper : MonoBehaviour
     {
@@ -52,7 +52,7 @@ namespace RPG.SceneManagement
 
         public void Load()
         {
-            GetComponent<SavingSystem>().Load(defaulSaveFile);
+            StartCoroutine(GetComponent<SavingSystem>().LoadLastScene(defaulSaveFile));
         }
 
         public void DeletSavefile()

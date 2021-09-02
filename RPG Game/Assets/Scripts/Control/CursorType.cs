@@ -1,4 +1,4 @@
-namespace RPG.Control
+namespace GameDevTV.Control
 {
     public enum CursorType
     {
@@ -7,6 +7,7 @@ namespace RPG.Control
         Combat,
         Dead,
         UI,
-        Pickup
+        Pickup,
+        FullPickup
     }
 }

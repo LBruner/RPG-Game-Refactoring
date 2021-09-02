@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RPG.Control
+namespace GameDevTV.Control
 {
     public class PatrolPath : MonoBehaviour
     {

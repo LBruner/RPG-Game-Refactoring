@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RPG.Stats
+namespace GameDevTV.Stats
 {
     public interface IModifierProvider
     {

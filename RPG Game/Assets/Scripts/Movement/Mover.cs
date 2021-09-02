@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.AI;
-using RPG.Core;
-using RPG.Saving;
-using RPG.Attributes;
+using GameDevTV.Core;
+using GameDevTV.Saving;
+using GameDevTV.Attributes;
 
-namespace RPG.Movement
+namespace GameDevTV.Movement
 {
     public class Mover : MonoBehaviour, IAction, ISaveable
     {

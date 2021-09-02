@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-namespace RPG.Cinematics
+namespace GameDevTV.Cinematics
 {
     public class CinematicTrigger : MonoBehaviour
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RPG.SceneManagement
+namespace GameDevTV.SceneManagement
 {
     public class Fader : MonoBehaviour
     {

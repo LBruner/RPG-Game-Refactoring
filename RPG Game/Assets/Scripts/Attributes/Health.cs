@@ -1,11 +1,11 @@
 using GameDevTV.Utils;
-using RPG.Core;
-using RPG.Saving;
-using RPG.Stats;
+using GameDevTV.Core;
+using GameDevTV.Saving;
+using GameDevTV.Stats;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace RPG.Attributes
+namespace GameDevTV.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {

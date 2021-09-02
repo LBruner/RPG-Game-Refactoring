@@ -1,8 +1,8 @@
 using System;
-using RPG.Saving;
+using GameDevTV.Saving;
 using UnityEngine;
 
-namespace RPG.Stats
+namespace GameDevTV.Stats
 {
     public class Experience : MonoBehaviour, ISaveable
     {
