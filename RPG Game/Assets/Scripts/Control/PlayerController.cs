@@ -26,6 +26,8 @@ namespace GameDevTV.Control
         [SerializeField] float maxNavMeshProjectionDistance = 1f;
         [SerializeField] float raycastRadius = 1f;
 
+        bool isDraggingUI = false;
+
         void Awake()
         {
             health = GetComponent<Health>();
@@ -53,11 +55,18 @@ namespace GameDevTV.Control
 
         private bool InteractWithUI()
         {
+            if (Input.GetMouseButtonUp(0)) isDraggingUI = false;
+
             if (EventSystem.current.IsPointerOverGameObject())
             {
+                if (Input.GetMouseButtonDown(0))
+                    isDraggingUI = true;
                 SetCursor(CursorType.UI);
                 return true;
             }
+
+            if (isDraggingUI)
+                return true;
             return false;
         }
 

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Rubbish Hat
   m_EditorClassIdentifier: 
   itemID: 890bc093-337f-4b09-9955-55721b1d08ba
-  displayName: 
+  displayName: Rubbish Hat
   description: It can help you when its raining...
-  icon: {fileID: 21300000, guid: d90fb267ee4e64245b86c677bd935db0, type: 3}
+  icon: {fileID: 21300000, guid: c1b61b3a91732a747a8496fc75a13fe2, type: 3}
   pickup: {fileID: 568451913782583557, guid: 3eef8f09d8e451b44bd9f11172bf3f88, type: 3}
   stackable: 0
   allowedEquipLocation: 0
