@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameDevTV.Stats
+namespace RPG.Stats
 {
     public enum Stat
     {

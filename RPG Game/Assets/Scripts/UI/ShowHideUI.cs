@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameDevTV.UI
+namespace RPG.UI
 {
     public class ShowHideUI : MonoBehaviour
     {

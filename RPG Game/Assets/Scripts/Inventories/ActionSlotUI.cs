@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using GameDevTV.Core.UI.Dragging;
-using GameDevTV.Inventories;
+using RPG.Core.UI.Dragging;
+using RPG.Inventories;
 using UnityEngine;
 
-namespace GameDevTV.UI.Inventories
+namespace RPG.UI.Inventories
 {
     /// <summary>
     /// The UI slot for the player action bar.

@@ -1,8 +1,8 @@
-﻿using GameDevTV.Attributes;
+﻿using RPG.Attributes;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace GameDevTV.Combat
+namespace RPG.Combat
 {
     public class Projectille : MonoBehaviour
     {

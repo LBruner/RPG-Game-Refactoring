@@ -1,12 +1,12 @@
 using System;
-using GameDevTV.Combat;
-using GameDevTV.Movement;
-using GameDevTV.Attributes;
+using RPG.Combat;
+using RPG.Movement;
+using RPG.Attributes;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
 
-namespace GameDevTV.Control
+namespace RPG.Control
 {
     [SelectionBase]
 

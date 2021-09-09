@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameDevTV.Stats
+namespace RPG.Stats
 {
     public class LevelDisplay : MonoBehaviour
     {

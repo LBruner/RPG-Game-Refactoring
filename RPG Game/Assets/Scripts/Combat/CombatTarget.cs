@@ -1,8 +1,8 @@
-﻿using GameDevTV.Control;
-using GameDevTV.Attributes;
+﻿using RPG.Control;
+using RPG.Attributes;
 using UnityEngine;
 
-namespace GameDevTV.Combat
+namespace RPG.Combat
 {
     [RequireComponent(typeof(Health))]
     public class CombatTarget : MonoBehaviour, IRaycastable

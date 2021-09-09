@@ -1,5 +1,5 @@
-﻿using GameDevTV.Control;
-using GameDevTV.Core;
+﻿using RPG.Control;
+using RPG.Core;
 using UnityEngine;
 using UnityEngine.Playables;
 

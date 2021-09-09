@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using GameDevTV.Saving;
+using RPG.Saving;
 
-namespace GameDevTV.Inventories
+namespace RPG.Inventories
 {
     /// <summary>
     /// Provides a store for the items equipped to a player. Items are stored by

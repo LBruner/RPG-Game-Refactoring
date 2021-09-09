@@ -1,5 +1,5 @@
-﻿using GameDevTV.Control;
-using GameDevTV.Inventories;
+﻿using RPG.Control;
+using RPG.Inventories;
 using UnityEngine;
 
 namespace RPG.Control

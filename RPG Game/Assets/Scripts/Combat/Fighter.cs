@@ -1,14 +1,15 @@
 using UnityEngine;
-using GameDevTV.Movement;
-using GameDevTV.Core;
-using GameDevTV.Saving;
-using GameDevTV.Attributes;
-using GameDevTV.Stats;
+using RPG.Movement;
+using RPG.Core;
+using RPG.Saving;
+using RPG.Attributes;
+using RPG.Stats;
 using System.Collections.Generic;
-using GameDevTV.Utils;
+using RPG.Utils;
 using System;
+using RPG.Inventories;
 
-namespace GameDevTV.Combat
+namespace RPG.Combat
 {
     [SelectionBase]
 
@@ -20,7 +21,7 @@ namespace GameDevTV.Combat
         [SerializeField] WeaponConfig defaultWeapon = null;
 
         private Health target = null;
-
+        Equipment equipment = null;
         WeaponConfig currentWeaponConfig;
         LazyValue<Weapon> currentWeapon;
 
@@ -30,6 +31,11 @@ namespace GameDevTV.Combat
         {
             currentWeaponConfig = defaultWeapon;
             currentWeapon = new LazyValue<Weapon>(SetDefaultWeapon);
+
+            equipment = GetComponent<Equipment>();
+
+            if (equipment)
+                equipment.equipmentUpdated += UpdateWeapon;
         }
 
         private Weapon SetDefaultWeapon()
@@ -46,6 +52,17 @@ namespace GameDevTV.Combat
         {
             currentWeaponConfig = weapon;
             currentWeapon.value = AttachWeapon(weapon);
+        }
+
+        private void UpdateWeapon()
+        {
+            var weapon = equipment.GetItemInSlot(EquipLocation.Weapon) as WeaponConfig;
+
+            if (weapon == null) EquipWeapon(defaultWeapon);
+            else
+            {
+                EquipWeapon(weapon);
+            }
         }
 
         private Weapon AttachWeapon(WeaponConfig weapon)

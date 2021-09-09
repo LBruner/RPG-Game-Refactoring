@@ -1,4 +1,4 @@
-namespace GameDevTV.Stats
+namespace RPG.Stats
 {
     public enum CharacterClass
     {

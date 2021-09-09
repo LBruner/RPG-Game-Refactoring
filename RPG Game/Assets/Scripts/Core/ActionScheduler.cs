@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameDevTV.Core
+namespace RPG.Core
 {
     public class ActionScheduler : MonoBehaviour
     {

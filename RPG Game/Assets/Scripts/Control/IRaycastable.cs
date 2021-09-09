@@ -1,4 +1,4 @@
-namespace GameDevTV.Control
+namespace RPG.Control
 {
     public interface IRaycastable
     {

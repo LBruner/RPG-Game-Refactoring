@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GameDevTV.Core
+namespace RPG.Core
 {
     public interface IAction
     {

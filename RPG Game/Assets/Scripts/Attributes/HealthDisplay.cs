@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameDevTV.Attributes
+namespace RPG.Attributes
 {
     public class HealthDisplay : MonoBehaviour
     {

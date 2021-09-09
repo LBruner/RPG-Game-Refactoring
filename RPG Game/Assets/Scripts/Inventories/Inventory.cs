@@ -1,8 +1,8 @@
 ﻿using System;
 using UnityEngine;
-using GameDevTV.Saving;
+using RPG.Saving;
 
-namespace GameDevTV.Inventories
+namespace RPG.Inventories
 {
     /// <summary>
     /// Provides storage for the player inventory. A configurable number of

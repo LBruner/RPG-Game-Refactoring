@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using GameDevTV.Utils;
+using RPG.Utils;
 using UnityEngine;
 
-namespace GameDevTV.Stats
+namespace RPG.Stats
 {
     public class BaseStats : MonoBehaviour
     {
