@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Bow
   description: arrow launcher
   icon: {fileID: 21300000, guid: 9415af11d73bb804c8d24343e1351132, type: 3}
-  pickup: {fileID: 0}
+  pickup: {fileID: 2435521307291634609, guid: 0bd5bec3734d971439506947d9de8334, type: 3}
   stackable: 0
   allowedEquipLocation: 5
   animatorOverride: {fileID: 22100000, guid: 7d9791147abfaa849bce61607e6fa929, type: 2}
